@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"> <head>
+  <title>Archer Industries</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Cache-control" content="no-cache, must-revalidate">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Instructions, products, and career data for employees at Archer Industries in Sherwood Middle School.">
+<!--  <meta http-equiv="Content-Security-Policy"
+      content="default-src "self"; img-src "self" https://www.bls.gov; child-src "self" https://www.youtube.com;
+               script-src "self" https://cdn.datatables.net https://unpkg.com https://code.jquery.com "nonce-rAnd0m"; 
+               style-src "self" "unsafe-inline" https://cdn.datatables.net https://code.jquery.com;">
+  -->
+  <!-- jQuery (DOM interaction, Accordions, Event handing, AutoComplete)-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" crossorigin="anonymous"
+          integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="></script>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.min.css">
+
+  <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js" defer></script> 
+  <link rel="stylesheet"
+        href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/github-dark-dimmed.min.css"> 
+
+  <!-- Apps (DataTables, Lunr (Search), TinyMCE (Edit)) -->
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" defer></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" defer></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js" defer></script>
+  <script src="https://cdn.datatables.net/colreorder/1.5.6/js/dataTables.colReorder.min.js" defer></script>
+  <link   type="text/css"       href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link   type="text/css"       href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
+  <link   type="text/css"       href="https://cdn.datatables.net/colreorder/1.5.6/css/colReorder.dataTables.min.css" rel="stylesheet"> 
+  <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js" defer></script> 
+  <!--<script type="text/javascript" src="https://unpkg.com/string-similarity/umd/string-similarity.min.js"></script> -->
+
+
+  <!-- Custom code to generate pages -->
+  <script src="js/search.js?v=220416" defer></script> 
+  <script src="js/nav.js?v=231103"></script>
+  <script src="js/edit.js?v=220416" defer ></script>
+  <link  href="js/bowmen.css" type="text/css" rel="stylesheet"> 
+  <script nonce="rAnd0m">
+    let dataVer = {"job":231103, "skill":230529, "project":230529, "postk12":231103, "class":220901, "union":230101}
+    let info = {"topic": {
+      "Home":{
+        "title":"Home",
+        "txt":"<p class='smsCoding'>Archer Industries is a leading Research and Development facility located within Sherwood Middle School.  In addition to investing in the future of our employees, we create top-tier products that are designed within our building.  The Engineering group supports three divisions within Archer Industries (Archer Industrial Applications, Archer Entertainment, and Archer Financial).</p><h5 class='smsCoding'>Navigating the Content</h5>"+
+        "<p>The site contains a variety of inter-linked data to help you improve your skill sets and experiences by connecting high school classes to post-secondary educational opportunities to future jobs and careers.  Using data from the following sources, the site attempts to provide context to assist with your return-on-investment (ROI) decisions on the myriad of ever-evolving career paths:</p><ul>"+
+        "<li><strong>Skills</strong> provide background information on the fundamental skillsets that you will develop at Archer Industries.  You will apply these skillsets to make several products over the course of the year.  In addition to these technical skills, you will also discuss the business and financial aspects of product development.</li>"+
+        "<li><strong>Products</strong> provide examples of some of the products that are available from our multiple divisions.  In addition to our standard products, every employee will have the opportunity to pursue their own R&D efforts to create new products in a team setting.</li>"+
+        "<li><strong>Courses@SHS</strong> provides information on 205 classes and 8 Career Pathways available at Sherwood High School.  This info was extracted from the <a target=_blank href='https://docs.google.com/document/d/1WretCP29wBT74n1AuBptgKRxWnI6HMRPf916oxawnNw/edit'>Academic Planning Guide</a> (formerly Bowmen Guide). For each career path, the site links the high school coursework to post-secondary and career opportunities.</li> "+
+        "<li><strong>Post-K12 Edu</strong> provides outcome-based data from the Dept of Education's <a target=_blank href='https://collegescorecard.ed.gov/'>College Scorecard</a> on over 70 post-secondary institutions in Oregon. Covering 289 different Fields of Study and over 2500 degree options, this invaluable data source provides cost, completion, and median salary data for <em>each</em> degree at <em>each</em> institution thus providing insights into the possible financial outcomes prior to making large investments in time/money.</li>"+
+        "<li><strong>Jobs</strong> provides descriptions, wage ranges, employment outlooks, related fields, and education opportunities from the federal <a target=_blank href='https://www.bls.gov'>Bureau of Labor Statistics</a>.  We extract Oregon-specific information for over <a target=_blank href='https://www.bls.gov/soc/home.htm'>950+ jobs</a>.  This information allows students and their families to make informed financial decisions about investing in various career paths.  The Department of Education maps <a target=_blank href='https://nces.ed.gov/ipeds/cipcode/post3.aspx?y=56'>jobs to post-secondary opportunities</a> which allow this site to cross-reference info between SHS classes, post-K12 education, and jobs.</li></ul>"+
+        "<p>The State of Oregon provides a listing of <a href='#HWHD'>High-Wage, High-Demand Jobs</a> in multiple career categories.  Additionally, this link includes the corresponding list of post-K12 degrees that are aligned with the jobs in the list.</p>",
+        "type":"front"
+      },
+      "HWHD":{
+        "title":"High-Wage, High-Demand Jobs",
+        "txt":"<h5>High-Wage, High-Demand Jobs</h5><p>The Oregon Employment Department uses the following criteria to identify high-wage, high-demand jobs:<ul><li><strong>High-Wage occupations</strong> pay more than the state-wide <em>median wage</em> of $23 per hour ($47,840 per year).  For context, the minimum wage is $13.50 in 2022.</li><li><strong>High-Demand occupations</strong> have more openings in the current year than the median number of total openings over a ten year period.</li></ul><p>The Oregon Department of Education classifies CTE Programs of Study by <em>clusters</em>.  Use the following drop-down menu to view jobs and degrees from each of defined CTE clusters:</p>",
+        "type":"front"
+      },
+      "allCourses":{
+        "title":"Sherwood High School Course Summary Table",
+        "txt":"<p><strong>You can change the table:</strong><ul><li>Sort(click header), Re-order(drag-n-drop header), hide/show (Col Vis button) columns</li><li>search whole table</li><li>export CSV for excel</li><li>Add filters by Dept, grade level, req (coming soon)</li></ul> </p>",
+        "type":"front"
+      },
+      "allPostK12":{
+        "title":"All Post-K12 Programs Summary Table",
+        "txt":"<p><strong>You can change the table:</strong><ul><li>Sort(click header), Re-order(drag-n-drop header), hide/show (Col Vis button) columns</li><li>search whole table</li><li>export CSV for excel</li><li>Add filters by Dept, grade level, req (coming soon)</li></ul> </p>",
+        "type":"front"
+      },
+      "allJobs":{
+        "title":"All Jobs Summary Table",
+        "txt":"<p><strong>You can change the table:</strong><ul><li>Sort(click header), Re-order(drag-n-drop header), hide/show (Col Vis button) columns</li><li>search whole table</li><li>export CSV for excel</li><li>Add filters by Dept, grade level, req (coming soon)</li></ul> </p>",
+        "type":"front"
+      }}
+    };
+    let soc2cip = {};
+
+    // if browser can't access jQuery via CDN; use local version 
+     window.jQuery || 
+         document.write("<script src='cdn/jquery-3.6.0.js'><\/script>\
+                         <script src='cdn/jquery-ui.min.js'><\/script>\
+                         <script src='cdn/jquery.dataTables.min.js'><\/script>");
+     //activateNavMenu();
+
+
+    // Load Data (STEM class, SHS classes, Job Descriptions, Wage info, RelatedOcc/College) 
+    Object.keys(dataVer).forEach(function(d) {
+      $.getJSON( "js/"+d+"Info.json?v="+dataVer[d], function( data ) { 
+        if (d == "postk12") {
+          info.postk12 = data.postk12;
+          info.college = data.college;
+          soc2cip = data.soc2cip;
+        } else {
+          info[d] = data;
+        }
+        console.log("(index.html) Loaded " +Object.keys(data).length+ " "+d+" items");
+        if (d != "union") {genNavHash(d);}
+        if (Object.keys(info).length == 8) { activateNavMenu();}
+      }) 
+      .fail(function( jqxhr, textStatus, error ) { 
+        console.error( "Request Failed: ("+d+") "+ textStatus + ", " + error);
+      })
+    });
+
+    $(document).ready(function(){  
+      console.log("Completed $document.ready() ");
+    });
+  </script>
+</head>
+
+<body>
+<div id="wrapDiv">
+  <div id="headDiv">
+    <h1 style="text-align: center; font-size: 24px; font-weight: normal; color: #1b2c1a;">
+      <a href="http://sms.sherwood.k12.or.us"><img alt="SMS HomePage" width="73" height="67" src="images/logo.png"></a>
+      Archer Industries
+    </h1>
+  </div>
+  <div id="search">
+    <ul>
+      <li><a class="h" href="http://sms.sherwood.k12.or.us/">SMS Website</a></li> 
+      <li><a class="h" href="https://sms.sherwood.k12.or.us/resources/forecasting-information/">SMS Forecasting</a></li> 
+      <li><a class="h" href="https://shs.sherwood.k12.or.us/resources/forecasting-information/">SHS Forecasting</a></li> 
+      <li><a class="h" href="http://catalog.pcc.edu/degreecertificateandcourseoverview/oregontransfermoduleotm/">OTM</a></li> 
+      <li><input type="text" id="autocomplete" placeholder="Keyword Lookup..."></li>
+    </ul>
+  </div>
+  <div id="bottomPage" style="display: flex">
+    <div id="nav" style="width:20%">
+      <h1 class="toc" id="Home">Home</h1>
+      <h1 class="toc smsCoding" id="allSkills">Skills</h1>
+      <div class="smsCoding" id="skill"></div>
+      <h1 class="toc smsCoding" id="allProjects">Products</h1>
+      <div class="smsCoding" id="project"></div>
+      <h1 class="toc" id="allCourses">Courses@SHS</h1>
+      <div id="class"></div>
+      <h1 class="toc" id="allPostK12">Post-K12 Edu</h1>
+      <div id="postk12"></div>
+      <h1 class="toc" id="allJobs">Job Info</h1>
+      <div id="job"></div>
+    </div>
+    <div id="mainDiv" style="width:80%">
+      <span id="id" style="display:none"></span>
+
+      <!--      allTable      -->
+      <div id="allTableDisplayDiv" class="displayDiv">
+        <h1 id="allTabletitle">Summary</h1>
+        <span id="allTableid" style="display:none"></span>
+        <div id="allTabletxt" class="editFormat">txt</div>
+      </div>
+
+      <!--      TOPIC      -->
+      <div id="topicDisplayDiv" class="displayDiv">
+        <h1 id="topictitle">Topic</h1>
+        <span id="topicid" style="display:none"></span>
+        <span id="topictype" style="display:none"></span>
+        <div id="topictxt" class="editFormat">txt</div>
+      </div>
+
+      <!--      SKILL      -->
+      <div id="skillDisplayDiv" class="displayDiv">
+        <p class="topnav" id="skillBreadcrumb"></p>
+        <h1 id="skilltitle">Skill</h1>
+        <span id="skillid" style="display:none"></span>
+        <span id="skilltype" style="display:none"></span>
+        <div id="skilltxt" class="editFormat">txt</div>
+      </div>
+
+      <!--      PROJECT      -->
+      <div id="projectDisplayDiv" class="displayDiv">
+        <p class="topnav" id="projectBreadcrumb"></p>
+        <h1 id="projecttitle">Project</h1>
+        <span id="projectid" style="display:none"></span>
+        <span id="projecttype" style="display:none"></span>
+        <div id="projectAllDiv">
+          <div id="projectIntro">
+            <p>The following tabs show the source code files used for this example:</p>
+            <p><a id="newTabLink" target="_blank" href="">Click HERE</a> to run the this example in new tab</p>
+          </div>
+          <div id="codeTabs">
+            <ul id="projectTabs">
+              <li><a href="#projecttxt">Explanation</a></li>
+              <li><a href="#tab-iframe">Demo</a></li>
+            </ul>
+            <div id="projecttxt" class="editFormat"></div>
+            <div id="tab-iframe"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--      CLASS DEPT      -->
+      <div id="deptDisplayDiv" class="displayDiv">
+        <p class="topnav" id="deptBreadcrumb"></p>
+        <h1 id="depttitle">Dept</h1>
+        <span id="deptid" style="display:none">id</span>
+        <span id="depttype" style="display:none">type</span>
+        <div id="depttxt" class="editFormat">txt</div>
+        <p >Other courses offered by the <span class="deptparent">dept</span> department:</p>
+        <ul id="deptOther"></ul>
+        <div id="deptcareer">
+          <h2>Job Outlook and Wage Information</h2>
+          <p>The following table shows possible career paths related to these classes:</p>
+          <div id="deptJobData"></div>
+
+          <h2>Post K-12 Education Opportunities</h2>
+          <p>The following table shows possible post-K12 programs related to this SHS class:</p>
+          <div id="deptPK12Data"></div>
+        </div>
+      </div>
+
+      <!--      CLASS      -->
+      <div id="classDisplayDiv" class="displayDiv">
+        <p class="topnav" id="classBreadcrumb"></p>
+        <h1 id="classtitle">Class</h1>
+        <span id="classid" style="display:none">id</span>
+        <span id="classtype" style="display:none">type</span>
+        <div id="classtxt" class="editFormat">txt</div>
+        <fieldset><legend>Course Info</legend>
+          <p><strong>Dept</strong>: <span id="classparent">dept</span>&nbsp;
+             <strong>ID:</strong>: <span id="classcrn">crn</span></p>
+          <p><strong>Req</strong>: <span id="classreq">req</span>&nbsp;
+              <strong>Grade Level</strong>: <span id="classlevel">level</span> (<span id="classlength">classLength</span>)</p>
+          <p><strong>Prereq</strong>: <span class="editSimple" id="classprereq">prereq</span></p>
+        </fieldset>
+        <p>Other courses offered by the <span id="classdept">dept</span> department:</p>
+        <ul id="classOther"></ul>
+      </div>
+
+      <!--      UNION      -->
+      <div id="unionDisplayDiv" class="displayDiv">
+        <h1 id="uniontitle">Union</h1>
+        <p>The following table provides a list of apprenticeships that have been offered by this group.  For each apprenticeship, the table also includes links to info on the cooresponding career path.</p>
+        <span id="unionid" style="display:none">ID</span>
+        <div id="unionJobTableDiv"></div>
+        <p>The following table contains the contact information for union committee.</p>
+        <table><tr><th colspan="2">Contact Info</th></tr>
+          <tr><td>Contact:</td>       <td id="unioncontact">Contact</td></tr>
+          <tr><td>Email:</td>  <td id="unionemail">Email</td></tr>
+          <tr><td>Website:</td><td id="unionwebsite">Website</td></tr>
+          <tr><td>Phone:</td>   <td id="unionphone">Phone</td></tr>
+          <tr><td>Street:</td>    <td id="unionstreet">Street</td></tr>
+          <tr><td>City:</td><td id="unioncity">City</td></tr>
+          <tr><td>State:</td>  <td id="unionstate">state</td></tr>
+          <tr><td>Zip Code:</td>   <td id="unionzip">Zip</td></tr>
+        </table>
+      </div>
+
+      <!--      APPRENTICESHIP      -->
+      <div id="apprenDisplayDiv" class="displayDiv">
+        <h1 id="apprentitle">Apprenticeship</h1>
+        <span id="apprenid" style="display:none">ID</span>
+        <p>The following table provides a list of apprenticeship opportunities across the State of Oregon. </p>
+        <div id="apprenOppoTableDiv"></div>
+        <p>The following table lists the wage and outlook information for jobs aligned with this apprenticeship area.</p>
+        <div id="apprenJobTableDiv"></div>
+      </div>
+
+      <!--      COLLEGE       -->
+      <div id="collegeDisplayDiv" class="displayDiv">
+        <h1 id="collegetitle">College</h1>
+        <p>The Department of Education provides a lot of information about all colleges across the country.
+        The following tables describe general information about the students who attend this school:</p>
+        <span id="collegeid" style="display:none">ID</span>
+        <table><tr><th colspan="2">Enrollment</th></tr>
+          <tr><td>Undergrads:</td>       <td id="collegeeUnderGrad">undergrad</td></tr>
+          <tr><td>Grad Students:</td>    <td id="collegeeGrad">grad</td></tr>
+          <tr><td>Percentage Female:</td><td id="collegeeFemale">female</td></tr>
+          <tr><td>Percentage Male:</td>  <td id="collegeeMale">male</td></tr>
+          <tr><td>Admission Rate:</td>   <td id="collegeeAdmit">admit</td></tr>
+          <tr><td>Retention Rate:</td>   <td id="collegeeRetain4">retain4</td></tr>
+          <tr><td>Graduation Rate:</td>  <td id="collegeeFinish">finish</td></tr>
+          <tr><td>Full-time Faculty:</td><td id="collegeeFacultyFulltime" style="font-weight:bold">fulltime</td></tr>
+        </table>
+        <p>You can access this information plus a lot more at the following Dept of Education sites:</p>
+        <ul>
+          <li><a id="collegeSC" target="_blank" href="">College Scorecard</a> presents school and Field of Study info in a web-friendly interface</li>
+          <li><a id="collegeNav" target="_blank" href="">College Navigator</a> presents more school info but has a dense presentation</li>
+        </ul>
+
+
+        <h2 id="collegeLoanHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="collegeLoan_img">&nbsp;&nbsp;Student Loan Repayment
+        </h2>
+        <div id="collegeLoanDiv">
+          <p>The following table shows the student loan status for graduates of <span class="sName">sName</span>.
+             Two years after graduation, <strong><span id="collegeOnTrack">onTrack</span>% of graduates owe 
+              less than the original loan amount</strong> of their federal student loans.  These numbers 
+              <em>do not include students who didn't graduate</em>.</p>
+          <table><tr><th colspan="2">Federal Student Loan Repayment</th></tr>
+            <tr><td>Paid in Full</td>
+                <td style="color:green" id="collegerepayPaid">Paid</td></tr>
+            <tr><td>Owe <em>less</em> than orig loan balance</td>
+                <td style="color:green" id="collegerepayProgress">Progress</td></tr>
+            <tr><td>Owe <em>more</em> than orig loan balance</td>
+                <td style="color:red" id="collegerepayNoProg">NoProg</td></tr>
+            <tr><td>Deferment (eg re-enter school)</td>
+                <td id="collegerepayDefer">defer</td></tr>
+            <tr><td>Forbearance (reduced payment):</td>
+                <td style="color:red" id="collegerepayForbear">forbear</td></tr>
+            <tr><td>Delinquent (30+ days overdue):</td>
+                <td style="color:red" id="collegerepayDelinq">Delinq</td></tr>
+            <tr><td>Default (360+ days overdue):</td>
+                <td style="color:red" id="collegerepayDefault">Default</td></tr>
+            <tr><td>Discharged:</td>
+                <td id="collegerepayDischar">discharge</td></tr>
+          </table>
+        </div>
+
+        <h2 id="collegeCostHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="collegeCost_img">&nbsp;&nbsp;College Costs
+        </h2>
+        <div id="collegeCostDiv">
+          <p>College is Expensive. It is often difficult to determine the actual costs of attendence
+            without applying to the school.  The following tables display this information using
+            Department of Education data. Their data is based on Federal Student Loan receiptients 
+            and is intended to give you a 'ballpark' idea of the typical costs for various family situations.</p>
+          <div class="container" style="display: flex">
+            <div style="width: 40%"> 
+              <table><tr><th colspan="2">Average Cost Per Family Income</th></tr>
+                <tr><td>$0 - $30k</td>   <td id="collegec0k">$-</td></tr>
+                <tr><td>$31K - $47K</td> <td id="collegec30k">$-</td></tr>
+                <tr><td>$48K - $75K</td> <td id="collegec48k">$-</td></tr>
+                <tr><td>$76K -$110K</td> <td id="collegec75k">$-</td></tr>
+                <tr><td>$110K and higher</td> <td id="collegec110k">$-</td></tr>
+              </table>
+            </div>
+            <div style="width: 60%">
+              <table><tr><th colspan="2">Annual Cost by Item</th></tr>
+                <tr><td>Overall Gross Cost</td>     <td id="collegecGross">$-</td></tr>
+                <tr><td>Overall Avg Net Cost</td>   <td id="collegecNet">$-</td></tr>
+                <tr><td>In-State Tuition</td>       <td id="collegecTutIn">$-</td></tr>
+                <tr><td>Out-of-State Tuition</td>   <td id="collegecTutOut">$-</td></tr>
+                <tr><td>Room/Board (on-campus)</td> <td id="collegecRoomOn">$-</td></tr>
+                <tr><td>Room/Board (off-campus)</td><td id="collegecRoomOff">$-</td></tr>
+                <tr><td>Books</td>                  <td id="collegecBooks">$-</td></tr>
+                <tr><td>Other Costs (on-campus)</td> <td id="collegecOtherOn">$-</td></tr>
+                <tr><td>Other Costs (off-campus)</td><td id="collegecOtherOff">$-</td></tr>
+              </table>
+             </div>
+          </div>
+        </div>
+
+        <h2 id="collegeTestHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="collegeTest_img">&nbsp;&nbsp;SAT/ACT Score
+        </h2>
+        <div id="collegeTestDiv">
+          <p>Although most schools no longer require students to submit ACT/SAT scores, this information can provide 
+            a valuable method for estimating your approximate standing at the school. Additionally, Colleges often award 
+            scholarships relative to your rank among their incoming freshman so these historic ACT/SAT scores
+            can give you a general idea prior to applying. Also, if you are typically at the top of your high school class,
+            this info could help manage your expectations when you are just one of numerous smart kids in class.
+            eg. If you are a STEM major in the bottom 25% of your college class, it is highly-likely that you will change 
+            to an 'easier' major regardless if you attend Harvard, OSU or PCC.</p>
+          <table><tr><th rowspan="2">Subject</th><th colspan="3">ACT</th><th colspan="3">SAT</th></tr>
+            <tr><th>25%</th><th>50%</th><th>75%</th> <th>25%</th><th>50%</th><th>75%</th> </tr>
+            <tr><td>Math</td> <td id="collegeactMath25"></td> <td id="collegeactMath50"></td> <td id="collegeactMath75"></td>
+                              <td id="collegesatMath25"></td> <td id="collegesatMath50"></td> <td id="collegesatMath75"></td></tr>
+            <tr><td rowspan="2">English<br>(Wr/Read)</td><td id="collegeactEng25"></td> <td id="collegeactEng50"></td> <td id="collegeactEng75"></td>
+                              <td id="collegesatWr25"></td> <td id="collegesatWr50"></td> <td id="collegesatWr75"></td></tr>
+                              <tr><td colspan="3"></td><td id="collegesatRead25"></td> <td id="collegesatRead50"></td> <td id="collegesatRead75"></td></tr>
+          </table>
+        </div>
+
+        <h2 id="collegeFOSHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="collegeFOS_img">&nbsp;&nbsp;Field of Study
+        </h2>
+        <div id="collegeFOSDiv">
+          <p>This section provides information on every degree program offered at <span class="sName">sName</span>.
+             The Federal Department of Education updates the College Scorecard data (wages/number of grads) annually.</p>
+          <p>The following table describes the color-coding scheme for average wages of program graduates.</p>
+          <ul>
+            <li><strong>Income</strong>: The minimum income bar was somewhat arbitrarily set at $31,200 
+              based on working fulltime @ $15/hr ($15/hr * 40hr/week * 52weeks/year).  Loan amounts are 
+              based on average student loans for the school (not degree). The payments are based on 
+              10-year loans and use post-tax income.</li>
+            <li><strong>Investment</strong>: The ROI bar attempts to evaluate the results of investing 
+              the EDU costs against investing up to 15% of your income (eg. 401K) after cost-of-living 
+              expenses and loan payments.</li>
+          </ul>
+          <table class="width80">
+            <tr><th>Summary</th><th>Income</th><th>Education Investment ROI</th></tr>
+            <tr><td style="font-weight:600;color:green">Higher-Income, Positive ROI</td>
+                <td>Average Wage <em>more</em> than $15/hour after loan payments</td>
+                <td>&lt;15% income contribution will outgain investing EDU costs</td></tr>
+            <tr><td style="font-weight:600;color:yellowgreen">Higher-Income, Negative ROI</td>
+                <td>Average Wage <em>more</em> than $15/hour after loan payments</td>
+                <td>15% income contribution will not outgain investing EDU costs</td></tr>
+            <tr><td style="color:orange">Lower-Income, No Investments</td>
+                <td>Average Wage <em>less</em> than $15/hour after loan payments</td>
+                <td>No disposable income for investment after loan payments</td></tr>
+            <tr><td style="color:red">Average Wage less than $15/hour</td>
+                <td>Average Wage <em>less</em> than $15/hour with No loan payments</td>
+                <td>No disposable income for investment after living expenses</td></tr>
+          </table>
+          <p>The following table provides data specific to this school.  The results are sorted by the most popular degrees.</p>
+          <div id="collegeDegreeData"></div>
+        </div>
+      </div>
+
+      <!--      POSTK12      -->
+      <div id="postk12DisplayDiv" class="displayDiv">
+        <p class="topnav" id="postk12Breadcrumb"></p>
+        <h1 id="postk12title">Degree</h1>
+        <span id="postk12id" style="display:none">id</span>
+        <span id="postk12type" style="display:none">type</span>
+        <p>The following section shows the degree progams available with the state of Oregon.</p>
+        <h2>Degrees from Oregon Post-K12 Schools</h2>
+        <div id="postk12DegreeData">data</div>
+        <h2>Related Occupations</h2>
+        <p>The following table shows related jobs for graduates with this degree:</p>
+        <div id="postk12RelOccData">data</div>
+
+      </div>
+      <!--      JOB GROUP      -->
+      <div id="jobgroupDisplayDiv" class="displayDiv">
+        <p class="topnav" id="jobgroupBreadcrumb"></p>
+        <h1 id="jobgrouptitle">Job Group</h1>
+        <span id="jobgroupid" style="display:none">id</span>
+        <span id="jobgrouptype" style="display:none">type</span>
+        <div id="jobgrouptxt" class="editFormat">txt</div>
+        <div id="jobgroupData">data</div>
+      </div>
+      <!--      JOB       -->
+      <div id="jobDisplayDiv" class="displayDiv">
+        <p class="topnav" id="jobBreadcrumb"></p>
+        <h1 class="title">Job</h1>
+        <div class="container" style="display: flex">
+          <div style="width: 25%"> <p id="jobtxt"></p> </div>
+          <div style="width: 70%"> <iframe width="420" height="345" id="jobYoutube"></iframe> </div>
+        </div>
+      <!--      JOB GROWTH      -->
+        <h2 id="jobGrowthHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="jobGrowth_img">&nbsp;&nbsp;Future Job Growth
+        </h2>
+        <div id="jobGrowthDiv">
+          <p>The <span class="jobstate">state</span> provides wage and job outlook 
+             information for the state of Oregon. <span class="jobbls"></span> provides information for the 
+             entire country (including breakdowns of state and regional areas).  The following table displays 
+             job outlook and wage information for <span class="title">jobName</span> relative to other jobs 
+             in the State of Oregon.</p>
+          <table class="width80">
+            <thead>
+              <tr><th colspan="4">Job Projection Data</th></tr>
+              <tr><th>Relative Groups</th><th>Current Number<br>of Jobs</th><th>Projected Jobs<br>in 10 Years</th><th>Projected Annual Openings<br>(new & replacement)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>All Jobs in Oregon</td>
+                  <td id="jobAlle_current"></td> <td id="jobAlle_2030"></td> <td id="jobAllo_total"></td></tr>
+              <tr><td>Similar <span class="jobSecTitle"></span></td>  
+                  <td id="jobSece_current"></td> <td id="jobSece_2030"></td> <td id="jobSeco_total"></td></tr>
+              <tr><td>Similar <span class="jobCatTitle"></span> Jobs</td>
+                  <td id="jobCate_current"></td> <td id="jobCate_2030"></td> <td id="jobCato_total"></td></tr>
+              <tr><td class="title"></td>
+                  <td id="jobJobe_current"></td> <td id="jobJobe_2030"></td> <td id="jobJobo_total"></td></tr>
+            </tbody>
+          </table>
+          <p>The state provides some <span class="jobopenings"></span> for <em><span class="title"></span></em> jobs.</p>
+        </div>
+
+        <!--      JOB Region       -->
+        <h2 id="jobRegionHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="jobRegion_img">&nbsp;&nbsp;Regional Dependencies
+        </h2>
+        <div id="jobRegionDiv">
+          <p>The following image shows employment openings for <span class="title"></span> across the nation.  This information 
+           provides a sense of whether a particular job is regionally-dependent.</p>
+          <img id="jobMEImg" src="" alt="Recent Employment of this job, by area">
+        </div>
+
+        <!--      JOB WAGES      -->
+        <h2 id="jobWageHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="jobWage_img">&nbsp;&nbsp;Current Job Wages
+        </h2>
+        <div id="jobWageDiv" >
+          <p>The <span class="jobstate">state</span> provides wage and job outlook 
+             information for the state of Oregon. <span class="jobbls"></span> provides information for the 
+             entire country (including breakdowns of state and regional areas).  The following table displays 
+             job outlook and wage information for <span class="title">jobName</span> relative to other jobs 
+             in the State of Oregon.</p>
+          <table>
+            <thead>
+              <tr><th colspan="6">Job Wage Data</th></tr>
+              <tr><th>Category</th><th>10%</th><th>25%</th><th>Median</th><th>75%</th><th>90%</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>All Jobs in Oregon</td>
+                  <td id="jobAllh_pct10">-</td> <td id="jobAllh_pct25">-</td> <td id="jobAllh_median">-</td>
+                  <td id="jobAllh_pct75">-</td> <td id="jobAllh_pct90">-</td> </tr>
+              <tr><td>Similar <span class="jobSecTitle"></span></td>  
+                  <td id="jobSech_pct10">-</td> <td id="jobSech_pct25">-</td> <td id="jobSech_median">-</td>
+                  <td id="jobSech_pct75">-</td> <td id="jobSech_pct90">-</td> </tr>
+              <tr><td>Similar <span class="jobCatTitle"></span> Jobs</td>
+                  <td id="jobCath_pct10">-</td> <td id="jobCath_pct25">-</td> <td id="jobCath_median">-</td>
+                  <td id="jobCath_pct75">-</td> <td id="jobCath_pct90">-</td> </tr>
+              <tr><td class="title"></td>
+                  <td id="jobJobh_pct10">-</td> <td id="jobJobh_pct25">-</td> <td id="jobJobh_median">-</td>
+                  <td id="jobJobh_pct75">-</td> <td id="jobJobh_pct90">-</td> </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!--      JOB REL OCC       -->
+        <h2 id="jobRelOccHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="jobRelOcc_img">&nbsp;&nbsp;Related Occupations
+        </h2>
+        <div id="jobRelOccDiv">
+          <p>Every job requires a certain set of skills. The <em>Bureau of Labor Statistics</em> provides the 
+             following websites to help identify the skills, knowledge topics, and education requirements for 
+             each job. </p>
+          <ul>
+            <li><span class="jobmnm">mnm</span> shows a summary of the skills and employment forecast for this occupation.</li>
+            <li><span class="jobonet">o*net</span> contains the same information with more details.</li>
+          </ul>
+          <p>The following table shows occupations that require similar skills as a <span class="title"></span>.</p>
+          <div id="jobrelatedOccTableDiv"></div>
+        </div>
+
+        <!--      JOB EDU      -->
+        <h2 id="jobEduHeader">
+          <img src="images/btn-closed.gif" alt="toggle" width="6" height="7" id="jobEdu_img">&nbsp;&nbsp;Post-Secondary Education
+        </h2>
+        <div id="jobEduDiv">
+          <div id="jobSchoolDataDiv"></div>
+        </div>
+      </div>
+
+      <!--      ROI      -->
+      <div id="roiDisplayDiv" class="displayDiv">
+        <h1>Career ROI Tool</h1>
+        <p>This web-based tool generates some 'ballpark' estimates so you can evaluate/compare the Return-On-Investment (ROI) for different College and Career paths. It applies some reasonable, editable assumptions and compares the possible long-term outcomes.  You can chose a generic job ($N/hour with 3% annual raises), college program (School/Degree-specific salary data from College Scorecard) or a job (salary data from Bureau of Labor Statistics).  For each path option, you can also factor the financial effects of various education paths (SHS, Comm College, University).</p>
+        <p>The methodology used by this tool is based on a series of New York FED <a href="https://www.newyorkfed.org/medialibrary/media/research/current_issues/ci20-3.pdf">articles.</a></p>
+        <h2>Create Custom Scenario for <span id="basetitle"></span></h2>
+        <div class="specifyContainer" style="display: flex;">
+          <div id="roiParamSpecify" style="width: 60%;">
+            <fieldset><legend>Modify Life Parameters</legend>
+              <p>Adjust the parameters used to evaluate annual living expenses, loan payments, and investments</p>
+              <input type="text" maxlength="5" size="4" id="roiInitCOL" class="roiGen" placeholder="$27,000"> Starting Cost-Of-Living (2% annual increase)<br>
+              <input type="text" maxlength="3" size="4" id="roiMinWeekly" class="roiGen" placeholder="$100"> Min Weekly Income<br>
+              <input type="checkbox" id="roiInvestTut" value="yes" checked><label for="roiInvestTut">Invest Tuition with Generic Job</label>
+              <!-- Summary table for EDU costs -->
+            </fieldset>
+          </div>
+          <div id="roiEDUSpecify" style="flex-grow: 1;">
+            <fieldset><legend>Modify Education Options</legend>
+              <p>Specify number of terms (1 term = 15 credits/quarter)	at each Institution for <em>Custom</em> scenario</p>
+              <input type="number" min="1" max="3" style="width:35px" id="roiHSTerm" class="roiGenEDU" value="2"> terms in High School via AP/Dual Credit/Extended Options)<br>
+              <input type="number" min="0" max="6" style="width:35px" id="roiCCTerm" class="roiGenEDU" value="3"> terms at Community College<br>
+              <input type="number" min="0" max="15" style="width:35px" id="roiUnivTerm" class="roiGenEDU" value="7"> terms at College/University<br>
+              <input type="text" maxlength="7" size="4" id="roiInitLoan" placeholder="$23,500"> Initial Student Loan Amount<br>
+              <div id="costDiv"></div>
+            </fieldset>
+          </div>
+        </div>
+        <div id="infoDiv"> 
+          <h2>Summary of Results</h2>
+          <div>
+            <p>Using the methodology from the New York FED paper, the following data compares the possible <strong>income</strong> and <strong>wealth</strong> outcomes of acquiring a degree against investing the same amount of money in a stock market index fund and getting a generic job that only requires on-the-job training.  Although the values appear to have a level of precision, they should not be taken literally and are just intended to show a reasonable, possible outcome.  Every one's situation is unique.</p>
+            <h3>Income (working and retirement)</h3>
+            <p>This table and graph summarize the possible 'income' outcomes of the three scenarios.  The calculations assume 
+              <input class="roiGen" type="text" maxlength="1" size="1" id="roiRatePay" placeholder="3">% annual pay increases and 
+              <input class="roiGen" type="text" maxlength="1" size="1" id="roiRateCOL" placeholder="2">% inflation rate. 
+              thus each 'curve' appears to be linear. </p> 
+            <p>For the 'base' and 'custom' scenarios, the first eight years use annual, equal increments from the 
+              10th percentile (<em>$<input class="roiGen" type="text" size=1 maxlength=5 id="roi10th"></input></em>) to 50th percentile (<em><span id="roi50th"></span></em>)  
+              of the salary range for the specified job.  Thus the slope may appear slightly different at the beginning of the career. 
+            </p>
+            <div class="summaryContainer" style="display: flex;">
+              <div style="width: 40%;">
+                <table>
+                <thead>
+                  <tr><th colspan="4">Summary of Working and Retirement Income</th></tr>
+                  <tr><th>Data</th><th>Generic Job</th><th class="jobName">Base Path</th><th>Custom Path</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Initial year income</td><td id="genericincomeInit"></td>
+                                                  <td id="baseincomeInit"></td>
+                                                  <td id="customincomeInit"></td></tr>
+                  <tr><td>Final year income</td>  <td id="genericincomeFinal"></td>
+                                                  <td id="baseincomeFinal"></td>
+                                                  <td id="customincomeFinal"></td></tr>
+                  <tr style="color:limegreen"><td>Lifetime post-tax income<br>minus loan payments</td>
+                                                  <td id="genericincomeLifetime"></td>
+                                                  <td id="baseincomeLifetime"></td>
+                                                  <td id="customincomeLifetime"></td></tr>
+                  <tr><td>Annual Retirement Income</td>
+                                                  <td id="genericincomeNoWork"></td>
+                                                  <td id="baseincomeNoWork"></td>
+                                                  <td id="customincomeNoWork"></td></tr>
+                </tbody>
+                </table>
+              </div>
+              <div style="width: 55%;">
+                <div id="plotIncome" style="margin-left:25px"></div>
+              </div> 
+            </div>
+
+            <h3>Wealth (Loans and Investments)</h3>
+            <p>This table and graph summarize the possible 'wealth' outcomes of the three scenarios. Wealth is your investments
+              minus your loans.  Unlike the linear 'income' curves, the 'wealth' curve is exponental due to compound interest (unless
+              you are unable to make your loan payments). The calculations assume you achieve the specified 'minimum weekly income' 
+              before paying any loans (if necessary, it pulls from investments to achieve the weekly income goal). It also assumes 
+              you can make your full loan payment before you add to your investments.  The investments are capped at 30% of post-tax 
+              income or 15% of gross income.  Investments grow at 7% annually.
+            </p>
+            <div class="summaryContainer" style="display: flex;">
+              <div style="width: 40%;">
+                <table>
+                <thead>
+                  <tr><th colspan="4">Summary of Loans/Investments</th></tr>
+                  <tr><th>Data</th><th>Generic Job</th><th class="jobName">Base Path</th><th>Custom Path</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>EDU Costs</td>          <td id="genericcostEDU"></td>
+                                                  <td id="basecostEDU"></td>
+                                                  <td id="customcostEDU"></td></tr>
+                  <tr><td>Oppotunity Costs</td>   <td id="genericcostOppo"></td>
+                                                  <td id="basecostOppo"></td>
+                                                  <td id="customcostOppo"></td></tr>
+                  <tr><td>Student Loans</td>      <td id="genericcostLoan"></td>
+                                                  <td id="basecostLoan"></td>
+                                                  <td id="customcostLoan"></td></tr>
+                  <tr><td>Initial Wealth</td>     <td id="genericwealthInit"></td>
+                                                  <td id="basewealthInit"></td>
+                                                  <td id="customwealthInit"></td></tr>
+                  <tr><td>Age paid off loans</td> <td id="genericageLoanPaid"></td>
+                                                  <td id="baseageLoanPaid"></td>
+                                                  <td id="customageLoanPaid"></td></tr>
+                  <tr><td>Final year interest</td><td id="genericwealthInterest"></td>
+                                                  <td id="basewealthInterest"></td>
+                                                  <td id="customwealthInterest"></td></tr>
+                  <tr style="color:limegreen"><td>Final year Wealth</td>
+                                                  <td id="genericwealthFinal"></td>
+                                                  <td id="basewealthFinal"></td>
+                                                  <td id="customwealthFinal"></td></tr>
+                </tbody>
+                </table>
+              </div>
+              <div style="width: 55%;">
+                <div id="plotWealth" style="margin-left:25px"></div>
+              </div> 
+            </div>
+          </div>
+          <h2>Detailed Table of Results</h2>
+          <div>
+            <table id="roiDataTable" class="width80">
+              <thead>
+                <tr><th rowspan="2">Age</th>
+                    <th rowspan="2">Cost Of Living</th>
+                    <th colspan="5">Generic Job</th>
+                    <th colspan="5">Base Path</th>
+                    <th colspan="5">Custom</th></tr>
+                <tr><th>Annual Income</th><th>Invest</th><th>Loan</th><th>Wealth</th><th>Monthly Post-tax Income</th>
+                    <th>Annual Income</th><th>Invest</th><th>Loan</th><th>Wealth</th><th>Monthly Post-tax Income</th>
+                    <th>Annual Income</th><th>Invest</th><th>Loan</th><th>Wealth</th><th>Monthly Post-tax Income</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>   <!-- end infoDiv -->
+      </div> <!-- end roiDiv -->
+      <!--      Search    -->
+      <div id="searchDisplayDiv" class="displayDiv"></div>
+    </div>   <!-- end mainDiv-->
+  </div>     <!-- end bottomDiv -->
+</div>       <!--end wrapDiv-->
+</body>
+</html>
