@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Clicker Game</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ .container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ }
+
+ .click-btn {
+ font-size: 3rem;
+ padding: 1rem 2rem;
+ border-radius: 10px;
+ cursor: pointer;
+ background-color: #4CAF50;
+ color: white;
+ box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+ transition: all 0.3s ease-in-out;
+ }
+
+ .click-btn:hover {
+ background-color: #3e8e41;
+ }
+
+ .count {
+ font-size: 5rem;
+ margin-top: 2rem;
+ font-weight: bold;
+ color: #4CAF50;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <button class="click-btn">Click Me!</button>
+ <div class="count">0</div>
+ </div>
+
+ <audio id="audio" src="soundboard/yay.mp3"></audio>
+
+ <script>
+ const clickBtn = document.querySelector('.click-btn');
+ const count = document.querySelector('.count');
+ const audio = document.querySelector('#audio');
+ let clicks = localStorage.getItem('clicks') || 0;
+
+ count.textContent = clicks;
+
+ clickBtn.addEventListener('click', () => {
+ clicks++;
+ localStorage.setItem('clicks', clicks);
+ count.textContent = clicks;
+ audio.currentTime = 0;
+ audio.play();
+ });
+ </script>
+</body>
+</html> 
