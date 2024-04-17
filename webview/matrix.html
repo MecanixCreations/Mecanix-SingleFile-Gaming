@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+	@font-face {
+		font-family: 'Matrix Code NFI';
+		font-style: normal;
+		font-weight: normal;
+		src: local('Matrix Code NFI'), url('font/matrix_code_nfi.woff') format('woff');
+	}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Matrix Effect</title>
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="Matrix Master Pro is a free Matrix code rain/digital rain animation generator created with HTML5, CSS3 and JavaScript.">
+	<meta name="keywords" content="Matrix Code, Code Rain, Digital Rain, Animation, Generator, Matrix Master Pro, Matrix">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta property="og:image" content="https://matrix.logic-wire.de/img/matrix-image.jpg">
+	<meta property="og:image:secure_url" content="https://matrix.logic-wire.de/img/matrix-image.jpg">
+	<style>*,:before,:after{box-sizing:inherit}html,div{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html,body{margin:0;padding:0;height:100%}body{background:#000;color:#4dff4d;font-family:"Lucida Console",Monaco,monospace,"Courier New",Courier;font-weight:400;font-size:1.25rem;line-height:1.5em;text-align:center;position:relative;-webkit-text-size-adjust:100%}a{color:#eee;text-decoration:none}section{margin:3em 0}ul,ol{padding-left:1em}table{margin:1em 0;border-collapse:collapse}td{vertical-align:top}td:first-child{white-space:nowrap;padding:.25em 1.5em .25em 0}button:hover{cursor:pointer}h1{font-size:4rem;letter-spacing:.5rem;line-height:1.25em}@media screen and (min-width: 60em){h1{font-size:6rem}}@media screen and (min-width: 80em){h1{font-size:8rem}}.hidden{opacity:0;z-index:-1}#matrix{position:absolute;width:100%;height:100%;display:block}#wrapper{width:100%;height:100%;margin:0 auto;overflow:hidden;position:relative}#menuTrigger{width:100%;height:100%;position:absolute;bottom:0;z-index:4000}#title{width:100%;height:100%;position:absolute;-moz-animation:move-title 12s 1;-webkit-animation:move-title 12s 1;animation:move-title 12s 1;animation-timing-function:linear;animation-delay:4s;padding:.25em;z-index:3199;-webkit-transition:color 1s ease;-moz-transition:color 1s ease;-ms-transition:color 1s ease;-o-transition:color 1s ease;transition:color 1s ease}.titleSmall{font-size:1.25rem}.menu{background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.7));position:absolute;width:100%;color:#eee;font-size:1.25rem;bottom:0;display:block;z-index:5000;-webkit-transition:transform .2s ease-in;-moz-transition:transform .2s ease-in;-ms-transition:transform .2s ease-in;-o-transition:transform .2s ease-in;transition:transform .2s ease-in}.menu.hidden{transform:translateY(100%);opacity:1;z-index:4000}.menuInner{max-width:50rem;margin:0 auto;padding:0 .125em}.menuInnerRow{float:left;width:100%;padding:.5em 0}.menuInnerCol,#menuTracks{padding-top:.5em}.menuInnerCol{float:left;width:100%}@media screen and (min-width: 22.5em){.menuInnerInnerCol{float:left;width:50%}}@media screen and (min-width: 40em){.menuWrapper{float:left;width:100%;padding-bottom:2em}.menuInnerCol,#menuTracks{padding-top:0}.menuInnerCol{width:33%;padding:.25em}.menuInnerInnerCol{width:100%}}.about{background:#000;color:#4dff4d;width:100%;height:100%;margin:0 auto;overflow:auto;position:absolute;z-index:6000;text-align:left;-webkit-transition:opacity 1.5s;-moz-transition:opacity 1.5s;-ms-transition:opacity 1.5s;-o-transition:opacity 1.5s;transition:opacity 1.5s}.aboutInner{padding:1em 1.5em;max-width:65rem;margin:0 auto}.about.hidden{z-index:3500}.return{margin:0}.footer{margin-top:4em;text-align:center}.key{display:inline-block;line-height:1.25em;width:1.25em;text-align:center;border:2px outset #4dff4d;-moz-border-radius:.25em;-webkit-border-radius:.25em;border-radius:.25em}.messageBox{background:linear-gradient(to bottom,rgba(0,0,0,0.1),rgba(0,0,0,0.4),rgba(0,0,0,0.1));position:absolute;width:100%;height:100%;color:#eee;font-size:1.25rem;z-index:3150;-webkit-transition:opacity 3s;-moz-transition:opacity 3s;-ms-transition:opacity 3s;-o-transition:opacity 3s;transition:opacity 3s;display:flex;align-items:center;justify-content:center}@media screen and (min-width: 60em){.messageBox{font-size:1.3rem}}.messageBox.hidden{z-index:3150}.messageBoxInner{max-width:65rem;padding:0 1.5em;margin:0 auto;mix-blend-mode:hard-light}.button{font-size:1.5rem;font-weight:700;display:inline-block;background:#333;color:#eee;border:2px solid transparent;border-radius:.125em;margin:.25em -.0625em;width:2.125em;height:2.125em;line-height:2.125em;text-align:center}.buttonMusic{background:#eee;color:#222}.buttonActive{background:#111;color:#fff;border:2px inset #666}.buttonMusic.buttonActive{color:#fff}.buttonActive.buttonPaused{color:#999}.buttonAuto{font-size:1em;width:auto;height:auto;padding:.125em .75em}#buttonAboutReturn{background:none;text-align:center;margin:0;position:fixed;top:0;right:0}@media screen and (min-width: 60em){#buttonAboutReturn{right:.75em}}span.menuButtonRow{display:block}#music{position:absolute;top:-5em;z-index:-2}@-moz-keyframes move-title{from{transform:translateY(0);opacity:1}to{transform:translateY(100%);opacity:0}}@-webkit-keyframes move-title{from{transform:translateY(0);opacity:1}to{transform:translateY(100%);opacity:0}}@keyframes move-title{from{transform:translateY(0);opacity:1}to{transform:translateY(100%);opacity:0}}</style>
+	<link rel="manifest" href="manifest.webmanifest">
+	<link rel="icon" type="image/png" href="favicon32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicon96x96.png" sizes="96x96">
+	<link rel="apple-touch-icon" href="favicon180x180.png" sizes="180x180">
+</head>
+<body>
+	<canvas id="matrix"></canvas>
+	
+	<div id="wrapper">
+		<div id="title">
+			<h1>MATRIX MASTER<br>PRO</h1>
+			<div class="titleSmall">
+				<p>Matrix Code Rain Animation Generator</p>
+			</div>
+		</div>
+		
+		<div id="about" class="about hidden">
+			<div class="aboutInner">
+				<a id="aboutInnerTop"></a>
+				<section>
+					<h2>About MATRIX MASTER PRO</h2>
+					<p>Matrix Master Pro is a free Matrix code rain/digital rain animation generator created with HTML5, CSS3 and JavaScript. It is designed as a independent research and art project with the purpose to explore the possibilities of modern web technologies.</p>
+				</section>
+				
+				<section>
+					<h3>Team</h3>
+					<p>Matrix Master Pro is being developed by <a target="_blank" href="https://logic-wire.de/">logic-wire websolutions</a> together with dedicated volunteers. Special thanks go to Master&nbsp;B, Jaculus Jaculus and Incredible&nbsp;D.</p>
+				</section>
+				
+				<section>
+					<h3>Keyboard Controls</h3>
+					<table>
+						<tr>
+					    	<td><span class="key">m</span></td><td>toggle menu</td>
+						</tr>
+						<tr>
+							<td><span class="key">r</span></td><td>reload/reset</td>
+						</tr>
+						<tr> 
+							<td><span class="key">q</span></td><td>toggle quotations</td>
+						</tr>
+						<tr>
+                       		<td><span class="key">i</span></td><td>toggle about page</td>
+						</tr>
+						<tr>
+					       <td><span class="key">s</span></td><td>toggle full screen</td>
+						</tr>
+						<tr>
+					       <td><span class="key">a</span>&nbsp;&hellip;&nbsp;<span class="key">f</span></td><td>play track a&nbsp;to&nbsp;f</td>
+						</tr>
+						<tr>
+					       <td><span class="key">1</span>&nbsp;<span class="key">2</span>&nbsp;<span class="key">3</span></td><td>set speed level</td>
+						</tr>
+						<tr>
+					       <td><span class="key">-</span>&nbsp;<span class="key">0</span>&nbsp;<span class="key">+</span></td><td>set zoom level</td>
+						</tr>
+						<tr>
+					       <td><span class="key">,</span>&nbsp;<span class="key">.</span></td><td>toggle x-/y-axis waves</td>
+						</tr>
+						<tr>
+							<td><span class="key">&larr;</span>&nbsp;<span class="key">&rarr;</span>&nbsp;<span class="key">&uarr;</span>&nbsp;<span class="key">&darr;</span></td><td>set direction</td>
+						</tr>
+						<tr>
+					       <td><span class="key">k</span>&nbsp;<span class="key">l</span></td><td>previous/next color</td>
+						</tr>
+					</table>
+				</section>
+				
+				
+				<section>
+					<h3>Credits</h3>
+					<h4>Matrix Code NFI font</h4>
+					<p><a target="_blank" href="http://www.norfok.com">Norfok® Incredible Font Design</a></p>
+					
+					<h4>Music</h4>
+					
+					<ul>
+					<li>Track A/B/C: <a target="_blank" href="https://www.fesliyanstudios.com">Royalty free music from FesliyanStudios</a></li>
+					<li>Track D/E/F: <a target="_blank" href="http://www.nihilore.com/">Nihilore Royalty Free Music</a></li>
+					</ul>
+					
+					<h4>Quotations</h4>
+					<p>Quotations are from the movie <a target="_blank" href="https://www.warnerbros.com/movies/matrix/">The Matrix</a>.</p>
+				</section>
+				
+				<section>
+					<h3>Version</h3>
+					<p>0.3.7</p>
+					<p><a target="_blank" href="changelog.txt">changelog.txt</a></p>
+				</section>
+				
+				<section>
+					<h3>Contact</h3>
+					<p><a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6d;&#x61;&#x74;&#x72;&#x69;&#x78;&#x40;&#x6c;&#x6f;&#x67;&#x69;&#x63;&#x2d;&#x77;&#x69;&#x72;&#x65;&#x2e;&#x64;&#x65;">
+&#x6d;&#x61;&#x74;&#x72;&#x69;&#x78;&#x40;&#x6c;&#x6f;&#x67;&#x69;&#x63;&#x2d;&#x77;&#x69;&#x72;&#x65;&#x2e;&#x64;&#x65;</a></p>
+				</section>
+				
+				<section>
+					<h3>Follow us</h3>
+					<p>
+						<a class="button buttonAuto" target="_blank" title="YouTube" href="https://www.youtube.com/c/MatrixMasterPro">YouTube</a>
+						<a class="button buttonAuto" target="_blank" title="Twitter" href="https://twitter.com/MatrixMasterPro">Twitter</a>
+						<a class="button buttonAuto" target="_blank" title="Facebook" href="https://www.facebook.com/matrix.master.pro/">Facebook</a>
+					</p>
+				</section>
+				
+				<section>
+					<h3>Donate</h3>
+					<p>If you like Matrix Master Pro you may want to support the project by <a style="white-space: nowrap;" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H5GJFVRCCC24G&source=url">making a donation</a>.</p>
+				</section>
+				
+				<p class="return"><button class="button" id="buttonAboutReturn" title="Return to the Matrix">&#10006;</button></p>
+				
+				<p class="footer"><a target="_blank" href="https://logic-wire.de/#kontakt">Legals&nbsp;(Impressum)</a><br><a target="_blank" href="https://logic-wire.de/datenschutz">Data&nbsp;Protection</a></p>
+			</div>
+		</div>
+		
+		<div id="menuTrigger"></div>
+		
+		<div id="messageBox" class="messageBox hidden"><p id="messageBoxInner" class="messageBoxInner"></p></div>
+		
+		<div id="menu" class="menu hidden">
+			<div id="menuInner" class="menuInner">
+				<div class="menuWrapper">
+					<div class="menuInnerRow">
+						<div class="menuInnerCol">
+							<span class="menuButtonRow menuButtonControls">
+								<button class="button" id="buttonReload" title="Reload Matrix">&#8635;</button>
+								<button class="button buttonActive" id="buttonToggleQuotes" title="Enable/Disable Quotations">Q</button>
+								<button class="button" id="buttonToggleAbout" title="About Matrix Master Pro">?</button>
+								<button class="button" id="buttonToggleFullscreen" title="Toggle Full Screen">&#x2752;</button>
+							</span>
+							
+							<span id="menuTracks" class="menuButtonRow"></span>
+						</div>
+						
+						<div class="menuInnerCol">
+							<div class="menuInnerInnerCol">
+								<span class="menuButtonRow">
+									<button class="button buttonSpeed" data-factor="0.5" title="Slow">&#8594;</button>
+									<button class="button buttonSpeed buttonActive" data-factor="1" title="Normal">&#8658;</button>
+									<button class="button buttonSpeed" data-factor="2" title="Fast">&#8667;</button>
+								</span>
+								
+								<span class="menuButtonRow">
+									<button class="button buttonZoom" data-factor="0.7" title="Zoom Out">-</button>
+									<button class="button buttonZoom buttonActive" data-factor="1" title="Reset Zoom">0</button>
+									<button class="button buttonZoom" data-factor="1.2" title="Zoom In">+</button>
+								</span>
+							</div>
+							
+							<div class="menuInnerInnerCol">
+								<span class="menuButtonRow">
+									<button class="button buttonWave" data-wave="waveY" title="Waves X-Axis">&#8764;</button>
+									<button class="button buttonDirectionY" data-direction="up" title="Up">&#8593;</button>
+									<button class="button buttonWave" data-wave="waveX" title="Waves Y-Axis">&#8768;</button><br>
+									<button class="button buttonDirectionX" data-direction="left" title="Left">&#8592;</button>
+									<button class="button buttonActive buttonDirectionY" data-direction="down" title="Down">&#8595;</button>
+									<button class="button buttonDirectionX" data-direction="right" title="Right">&#8594;</button>
+								</span>
+							</div>
+						</div>
+						
+						<div class="menuInnerCol">
+							<div id="menuColors"></div>
+						</div>		
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<audio id="music">
+			<source id="musicSource" src="music/New_Heights_-_David_Fesliyan.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	
+	<script>function Font(){var e=this;e.family="Matrix Code NFI",e.size=30,e.sizeDefault=30,e.sizeVariable=function(){return Math.floor((.7*Math.random()+.5)*e.size)},e.setZoom=function(t){e.size=Math.floor(t*e.sizeDefault)}}function UserInterface(){var e=this;e.elements={wrapper:document.getElementById("wrapper"),menu:document.getElementById("menu"),menuTrigger:document.getElementById("menuTrigger"),menuColors:document.getElementById("menuColors"),menuTracks:document.getElementById("menuTracks"),about:document.getElementById("about"),aboutInnerTop:document.getElementById("aboutInnerTop"),messageBox:document.getElementById("messageBox"),button:{color:[],music:[],zoom:document.getElementsByClassName("buttonZoom"),speed:document.getElementsByClassName("buttonSpeed"),directionX:document.getElementsByClassName("buttonDirectionX"),directionY:document.getElementsByClassName("buttonDirectionY"),wave:document.getElementsByClassName("buttonWave"),fullscreen:document.getElementById("buttonToggleFullscreen"),quotes:document.getElementById("buttonToggleQuotes")}},e.show={message:function(t){e.elements.messageBox.firstChild.innerHTML=t,e.elements.messageBox.classList.remove("hidden")}},e.close={message:function(){e.elements.messageBox.classList.add("hidden")},menu:function(){e.elements.menu.classList.add("hidden")}},e.toggle={menu:function(){e.elements.menu.classList.toggle("hidden")},about:function(){e.elements.about.classList.toggle("hidden")&&setTimeout(function(){e.elements.aboutInnerTop.scrollIntoView()},1500)},fullscreen:function(){e.elements.button.fullscreen.classList.toggle("buttonActive");var t=document.documentElement;document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement||document.msFullscreenElement?document.exitFullscreen?document.exitFullscreen():document.msExitFullscreen?document.msExitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitExitFullscreen&&document.webkitExitFullscreen():t.requestFullscreen?t.requestFullscreen():t.msRequestFullscreen?t.msRequestFullscreen():t.mozRequestFullScreen?t.mozRequestFullScreen():t.webkitRequestFullscreen&&t.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)},quotes:function(){e.elements.button.quotes.classList.toggle("buttonActive")||e.close.message()},button:{music:function(t){for(var n=0;n<e.elements.button.music.length;n++)t!=e.elements.button.music[n]&&e.elements.button.music[n].classList.remove("buttonActive","buttonPaused");t.classList.contains("buttonActive")?t.classList.toggle("buttonPaused"):t.classList.add("buttonActive")},generic:function(e){e.classList.toggle("buttonActive")}}},e.activate={button:function(t,n){for(var o=0;o<e.elements.button[n].length;o++)e.elements.button[n][o].classList.remove("buttonActive");t.classList.add("buttonActive")}}}function Direction(){var e=this;e.currentX="none",e.currentY="down",e.directionX={left:-1,right:1,none:0},e.directionY={down:1,up:-1,none:0},e.setX=function(t){e.directionX.hasOwnProperty(t)&&(e.currentX=t)},e.setY=function(t){e.directionY.hasOwnProperty(t)&&(e.currentY=t)}}function Color(){_c=this,_c.default="#00FF00",_c.current="#00FF00",_c.palette={lime:"#00FF00",olive:"#999900",mediumseagreen:"#3CB371",red:"#FF1A1A",deeppink:"#FF1493",fuchsia:"#FF00FF",orange:"#FFA500",yellow:"#FFFF00",blue:"#3333FF",dodgerblue:"#1E90FF",aqua:"#00FFFF",whitesmoke:"#F5F5F5"},_c.set=function(e){_c.palette.hasOwnProperty(e)&&(_c.current=_c.palette[e])}}function Music(){var e=this;e.player=document.getElementById("music"),e.playerSource=document.getElementById("musicSource"),e.track={A:{author:"David Fesliyan",title:"New Heights",source:"music/New_Heights_-_David_Fesliyan.mp3"},B:{author:"David Fesliyan",title:"Journey To The Promise",source:"music/Journey_To_The_Promise_-_David_Fesliyan.mp3"},C:{author:"David Fesliyan",title:"Super Hero Showdown",source:"music/Super_Hero_Showdown_-_David_Fesliyan.mp3"},D:{author:"Nihilore",title:"Eigengrau",source:"music/Eigengrau.mp3"},E:{author:"Nihilore",title:"In The Belly Of The Whale",source:"music/In_the_Belly_of_the_Whale.mp3"},F:{author:"Nihilore",title:"The Water And The Well",source:"music/The_Water_and_the_Well.mp3"}},e.set=function(t){e.track.hasOwnProperty(t)&&(e.playerSource.getAttribute("src")==e.track[t].source?e.player.paused?e.player.play():e.player.pause():(e.playerSource.setAttribute("src",e.track[t].source),e.player.load(),e.player.play()))}}function Wave(){var e=this;e.direction={waveX:!1,waveY:!1},e.generate=function(e,t){return Math.floor(t*Math.sin(e/t))},e.toggle=function(t){e.direction.hasOwnProperty(t)&&(e.direction[t]=!e.direction[t])}}function Ticker(e,t=0,n=0){var o=this;o.last=!1,o.interval=e,o.intervalDefault=e,o.duration=t,o.delay=n,o.setSpeed=function(e){o.interval=Math.floor(1/e*o.intervalDefault)}}function Message(e,t){this.enabled=!0,this.index=0,this.ticker=new Ticker(e,t),this.pool=["Follow the white rabbit.","I’m trying to free your mind, Neo. But I can only show you the door. You’re the one that has to walk through it.","This your last chance. After this there is no turning back. You take the blue pill, the story ends. You wake up in your bed and believe whatever you want to. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember, all I'm offering is the truth. Nothing more.","Have you ever had a dream, Neo, that you were so sure was real? What if you were unable to wake from that dream, Neo? How would you know the difference between the dream world and the real world?","The Matrix is the world that has been pulled over your eyes to blind you from the truth.","What you know you can’t explain, but you feel it. You’ve felt it your entire life, that there’s something wrong with the world. You don’t know what it is, but it’s there, like a splinter in your mind, driving you mad.","Unfortunately, no one can be told what the Matrix is. You have to see it for yourself.","The Matrix is a system, Neo. That system is our enemy. But when you’re inside, you look around, what do you see? Businessmen, teachers, lawyers, carpenters. The very minds of the people we are trying to save. But until we do, these people are still a part of that system and that makes them our enemy. You have to understand, most of these people are not ready to be unplugged. And many of them are so inert, so hopelessly dependent on the system that they will fight to protect it.."," I don't like the idea that I'm not in control of my life.","Throughout human history, we have been dependent on machines to survive. Fate, it seems, is not without a sense of irony.","What are you waiting for? You're faster than this. Don't think you are, know you are. Come on. Stop trying to hit me and hit me.","If real is what you can feel, smell, taste and see, then 'real' is simply electrical signals interpreted by your brain.","You have to let it all go, Neo. Fear, doubt, and disbelief, Free your mind.","There is a difference between knowing the path and walking the path.","To deny our impulses is to deny the very thing that makes us human.","As long as the Matrix exists, the human race will never be free."]}function Keyboard(e){var t=this;t.keys={music:["a","b","c","d","e","f"],zoom:["-","0","+"],wave:[",","."]},window.addEventListener("keydown",function(n){if(!n.defaultPrevented){switch(n.key){case"r":e.reload();break;case"q":e.message.enabled=!e.message.enabled,e.ui.toggle.quotes();break;case"i":e.ui.toggle.about();break;case"s":e.ui.toggle.fullscreen();break;case"a":case"b":case"c":case"d":case"e":case"f":index=t.keys.music.indexOf(n.key),e.music.set(e.ui.elements.button.music[index].getAttribute("data-track")),e.ui.toggle.button.music(e.ui.elements.button.music[index]);break;case"1":case"2":case"3":index=n.key-1,e.ticker.setSpeed(e.ui.elements.button.speed[index].getAttribute("data-factor")),e.ui.activate.button(e.ui.elements.button.speed[index],"speed");break;case"-":case"0":case"+":index=t.keys.zoom.indexOf(n.key),e.font.setZoom(e.ui.elements.button.zoom[index].getAttribute("data-factor")),e.ui.activate.button(e.ui.elements.button.zoom[index],"zoom"),e.resize();break;case",":case".":index=t.keys.wave.indexOf(n.key),e.clearScreen(),e.wave.toggle(e.ui.elements.button.wave[index].getAttribute("data-wave")),e.ui.toggle.button.generic(e.ui.elements.button.wave[index]),e.init();break;case"Down":case"ArrowDown":case"Up":case"ArrowUp":switch(n.key){case"Up":case"ArrowUp":index=0;break;default:index=1}if(e.clearScreen(),e.ui.elements.button.directionY[index].classList.contains("buttonActive")){e.direction.setX("none");for(var o=0;o<e.ui.elements.button.directionX.length;o++)e.ui.elements.button.directionX[o].classList.contains("buttonActive")&&e.ui.toggle.button.generic(e.ui.elements.button.directionX[o],"directionX")}e.direction.setY(e.ui.elements.button.directionY[index].getAttribute("data-direction")),e.ui.activate.button(e.ui.elements.button.directionY[index],"directionY"),e.init();break;case"Left":case"ArrowLeft":case"Right":case"ArrowRight":switch(n.key){case"Left":case"ArrowLeft":index=0;break;default:index=1}if(e.clearScreen(),e.ui.elements.button.directionX[index].classList.contains("buttonActive")){e.direction.setY("none");for(o=0;o<e.ui.elements.button.directionY.length;o++)e.ui.elements.button.directionY[o].classList.contains("buttonActive")&&e.ui.toggle.button.generic(e.ui.elements.button.directionY[o],"directionY")}e.direction.setX(e.ui.elements.button.directionX[index].getAttribute("data-direction")),e.ui.activate.button(e.ui.elements.button.directionX[index],"directionX"),e.init();break;case"m":e.ui.toggle.menu();break;case"k":case"l":for(var i in e.clearScreen(),index=0,e.color.palette){if(e.color.palette[i]==e.color.current)break;index++}"k"==n.key?(index--,index<0&&(index=Object.keys(e.color.palette).length-1)):(index++,index>=Object.keys(e.color.palette).length&&(index=0)),e.color.set(Object.keys(e.color.palette)[index]),e.ui.elements.wrapper.style.color=e.color.current,e.ui.activate.button(e.ui.elements.button.color[index],"color");break;default:return}n.preventDefault()}},!0)}function Matrix(e){var t=this;t.m=[],t.chars="!\"#$%&'()*+,-./:;<=>?[\\]^_{|}~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split(""),t.density=1.2,t.canvas=document.getElementById(e),t.context=t.canvas.getContext("2d"),t.canvas.width=window.innerWidth,t.canvas.height=window.innerHeight,t.font=new Font,t.ui=new UserInterface,t.direction=new Direction,t.color=new Color,t.music=new Music,t.wave=new Wave,t.ticker=new Ticker(40,0,14500),t.message=new Message(12e4,4e4),t.keyboard=new Keyboard(t),t.numCols=Math.floor(t.density*t.canvas.width/t.font.size),t.numRows=Math.floor(t.density*t.canvas.height/t.font.size),t.randomInt=function(e){return Math.floor(Math.random()*e)},t.randomChar=function(){return t.chars[t.randomInt(t.chars.length)]},t.createChar=function(e=0){var n=t.font.sizeVariable(),o=posY=stopX=stopY=0;return"none"==t.direction.currentY?posY=t.randomInt(t.canvas.height):"down"==t.direction.currentY?(posY=-n-e,stopY=Math.floor(t.randomInt(1.2*t.canvas.height)),stopY>t.canvas.height&&(stopY=t.canvas.height),stopY+=n):"up"==t.direction.currentY&&(posY=t.canvas.height+n+e,stopY=t.canvas.height-Math.floor(t.randomInt(1.2*t.canvas.height)),stopY<0&&(stopY=0),stopY-=n),"none"==t.direction.currentX?o=t.randomInt(t.canvas.width):"right"==t.direction.currentX?("none"!=t.direction.currentY?(o=t.randomInt(t.canvas.width)-t.randomInt(t.canvas.width)/2,posY=t.randomInt(t.canvas.height),"down"==t.direction.currentY?posY-=n:posY+=n):o=-n-e,stopX=Math.floor(t.randomInt(1.2*t.canvas.width)),stopX>t.canvas.width&&(stopX=t.canvas.width)):"left"==t.direction.currentX&&("none"!=t.direction.currentY?(o=t.randomInt(t.canvas.width)+t.randomInt(t.canvas.width)/2,posY=t.randomInt(t.canvas.height),"down"==t.direction.currentY?posY-=n:posY+=n):o=t.canvas.width+n+e,stopX=t.randomInt(t.canvas.width)-Math.floor(t.randomInt(1.2*t.canvas.width)),stopX<-n&&(stopX=-n)),{posX:o,posY:posY,stopX:stopX,stopY:stopY,fontSize:n,prev:{posX:0,posY:0,char:""}}},t.init=function(){t.m=[];for(var e=0;e<t.numCols;e++)t.m.push(t.createChar(2*t.randomInt(t.canvas.height)));window.requestAnimationFrame(t.draw)},t.resize=function(){t.canvas.width=window.innerWidth,t.canvas.height=window.innerHeight,t.numCols=Math.floor(t.density*t.canvas.width/t.font.size),t.numRows=Math.floor(t.density*t.canvas.height/t.font.size),t.init()},t.clearScreen=function(){t.context.clearRect(0,0,t.canvas.width,t.canvas.height)},t.drawCharPrev=function(e){t.context.font=e.fontSize+"px "+t.font.family,t.context.fillStyle=t.color.current,t.context.globalCompositeOperation="hard-light",t.context.fillText(e.prev.char,e.prev.posX,e.prev.posY)},t.drawChar=function(e){var n=t.randomChar();return t.context.globalCompositeOperation="source-atop",t.context.fillStyle="rgba(0, 0, 0, 0.5)",t.context.fillRect(e.posX-Math.floor(.25*e.fontSize),e.posY-Math.floor(.8*e.fontSize),e.fontSize,e.fontSize),t.drawCharPrev(e),t.context.font=e.fontSize+"px "+t.font.family,t.context.globalCompositeOperation="source-over",t.context.fillStyle="white",t.context.fillText(n,e.posX,e.posY),n},t.draw=function(e){if(e>t.ticker.delay){if(!t.ticker.last||e>=t.ticker.last+t.ticker.interval){t.ticker.last=e,t.context.fillStyle="rgba(0, 0, 0, 0.09)",t.context.fillRect(0,0,t.canvas.width,t.canvas.height);for(var n=0;n<t.m.length;n++){var o=0,i=0,r=!0;if(t.wave.direction.waveX){if("down"==t.direction.currentY||"up"==t.direction.currentY)var s=t.m[n].posY;else s=e;o=t.wave.generate(s,t.m[n].fontSize)}if(t.wave.direction.waveY){if("down"==t.direction.currentY||"up"==t.direction.currentY)var a=e;else a=t.m[n].posX;i=t.wave.generate(a,t.m[n].fontSize)}t.m[n].posX+=t.direction.directionX[t.direction.currentX]*t.m[n].fontSize+o,t.m[n].posY+=t.direction.directionY[t.direction.currentY]*t.m[n].fontSize+i,"down"==t.direction.currentY?t.m[n].posY<t.m[n].stopY&&(t.m[n].posY>=0&&(t.m[n].prev.char=t.drawChar(t.m[n])),r=!1):"up"==t.direction.currentY?t.m[n].posY>t.m[n].stopY&&(t.m[n].posY<=t.canvas.height&&(t.m[n].prev.char=t.drawChar(t.m[n])),r=!1):"right"==t.direction.currentX?t.m[n].posX<t.m[n].stopX&&(t.m[n].posX>=-t.m[n].fontSize&&(t.m[n].prev.char=t.drawChar(t.m[n])),r=!1):"left"==t.direction.currentX&&t.m[n].posX>t.m[n].stopX&&(t.m[n].posX<=t.canvas.width&&(t.m[n].prev.char=t.drawChar(t.m[n])),r=!1),r?(t.drawCharPrev(t.m[n]),t.m[n]=t.createChar()):(t.m[n].prev.posX=t.m[n].posX,t.m[n].prev.posY=t.m[n].posY)}}t.message.enabled&&((!t.message.ticker.last&&e>t.message.ticker.interval||e>=t.message.ticker.last+t.message.ticker.interval)&&(t.message.ticker.last=e,t.ui.show.message(t.message.pool[t.message.index]),t.message.index++,t.message.index>=t.message.pool.length&&(t.message.index=0)),e>=t.message.ticker.last+t.message.ticker.duration&&t.ui.close.message())}window.requestAnimationFrame(t.draw)},t.reload=function(){window.location.reload(!1)};var n=document.getElementById("title");for(var o in n.addEventListener("webkitAnimationEnd",function(){this.outerHTML=""}),n.addEventListener("animationend",function(){this.outerHTML=""}),t.ui.elements.menu.addEventListener("click",t.ui.close.menu),t.ui.elements.menuTrigger.addEventListener("click",t.ui.toggle.menu),document.getElementById("buttonReload").addEventListener("click",function(){t.reload()}),document.getElementById("buttonToggleAbout").addEventListener("click",t.ui.toggle.about),document.getElementById("buttonAboutReturn").addEventListener("click",t.ui.toggle.about),t.ui.elements.button.fullscreen.addEventListener("click",t.ui.toggle.fullscreen),t.ui.elements.button.quotes.addEventListener("click",function(e){e.stopPropagation(),t.message.enabled=!t.message.enabled,t.ui.toggle.quotes()}),t.color.palette){(r=document.createElement("button")).appendChild(document.createTextNode(" ")),r.classList.add("button","buttonColor"),t.color.current==t.color.palette[o]&&r.classList.add("buttonActive"),r.style.backgroundColor=t.color.palette[o],r.setAttribute("data-color",o),r.addEventListener("click",function(e){e.stopPropagation(),t.clearScreen(),t.color.set(this.getAttribute("data-color")),t.ui.elements.wrapper.style.color=t.color.current,t.ui.activate.button(this,"color")}),t.ui.elements.menuColors.appendChild(r),t.ui.elements.menuColors.appendChild(document.createTextNode(" ")),t.ui.elements.button.color.push(r)}for(var i in t.music.track){var r;(r=document.createElement("button")).appendChild(document.createTextNode(i)),r.classList.add("button","buttonMusic"),r.setAttribute("data-track",i),r.setAttribute("title",t.music.track[i].author+" – "+t.music.track[i].title),r.addEventListener("click",function(e){e.stopPropagation(),t.music.set(this.getAttribute("data-track")),t.ui.toggle.button.music(this)}),t.ui.elements.menuTracks.appendChild(r),t.ui.elements.menuTracks.appendChild(document.createTextNode(" ")),t.ui.elements.button.music.push(r)}for(var s=0;s<t.ui.elements.button.speed.length;s++)t.ui.elements.button.speed[s].addEventListener("click",function(e){e.stopPropagation(),t.ticker.setSpeed(this.getAttribute("data-factor")),t.ui.activate.button(this,"speed")});for(s=0;s<t.ui.elements.button.zoom.length;s++)t.ui.elements.button.zoom[s].addEventListener("click",function(e){e.stopPropagation(),t.font.setZoom(this.getAttribute("data-factor")),t.ui.activate.button(this,"zoom"),t.resize()});for(s=0;s<t.ui.elements.button.directionX.length;s++)t.ui.elements.button.directionX[s].addEventListener("click",function(e){if(e.stopPropagation(),t.clearScreen(),this.classList.contains("buttonActive")){t.direction.setY("none");for(var n=0;n<t.ui.elements.button.directionY.length;n++)t.ui.elements.button.directionY[n].classList.contains("buttonActive")&&t.ui.toggle.button.generic(t.ui.elements.button.directionY[n],"directionY")}t.direction.setX(this.getAttribute("data-direction")),t.ui.activate.button(this,"directionX"),t.init()});for(s=0;s<t.ui.elements.button.directionY.length;s++)t.ui.elements.button.directionY[s].addEventListener("click",function(e){if(e.stopPropagation(),t.clearScreen(),this.classList.contains("buttonActive")){t.direction.setX("none");for(var n=0;n<t.ui.elements.button.directionX.length;n++)t.ui.elements.button.directionX[n].classList.contains("buttonActive")&&t.ui.toggle.button.generic(t.ui.elements.button.directionX[n],"directionX")}t.direction.setY(this.getAttribute("data-direction")),t.ui.activate.button(this,"directionY"),t.init()});for(s=0;s<t.ui.elements.button.wave.length;s++)t.ui.elements.button.wave[s].addEventListener("click",function(e){e.stopPropagation(),t.clearScreen(),t.wave.toggle(this.getAttribute("data-wave")),t.ui.toggle.button.generic(this),t.init()});t.music.player.addEventListener("ended",function(){for(var e=0;e<t.ui.elements.button.music.length;e++)if(t.ui.elements.button.music[e].classList.contains("buttonActive")){var n=e<t.ui.elements.button.music.length-1?e+1:0;return t.music.set(t.ui.elements.button.music[n].getAttribute("data-track")),void t.ui.toggle.button.music(t.ui.elements.button.music[n])}}),window.addEventListener("resize",function(){t.resize()}),t.init()}new Matrix("matrix");</script>
+</body>
+</html>

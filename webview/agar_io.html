@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agar</title>
+  <style>
+    body {
+      background-color: #a7f96c;
+      text-align: center;
+    }
+    canvas {
+      border: 5px solid black;
+      background-color: #ffffff;
+      border-radius: 3%;
+      background-image: url("https://3.bp.blogspot.com/-4Pvk6z4KgDo/V2amIv0ltuI/AAAAAAAAA1E/RSmcBR0o6LE6_mvhcXwrAlLUXbpgPT2qgCLcB/s1600/agario%2Bwhite%2Bbackground.png");
+    }
+    #left {
+      width: 0%;
+      height: 820px;
+      float: left;
+    }
+    #stuff {
+      text-align: center;
+      float:left;
+      margin-left: 25%;
+    }
+    #score {
+      color: white;
+      width: 700px;
+    }
+    #red {
+      width: 350px;
+      float: left;
+      height: 60px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    #blue {
+      width: 350px;
+      float: right;
+      height: 60px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+    #resultDiv {
+      width: 700px;
+      height: 60px;
+      background-color: green;
+      border-radius: 50%;
+      color: white;
+    }
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+    #button {
+      width: 700px;
+    }
+    #redButtons {
+      width: 350px;
+      background-color: red;
+      height: 214px;
+      float:left;
+      text-align:center;
+    }
+    #blueButtons {
+      width: 350px;
+      background-color: blue;
+      height: 214px;
+      float:right;
+      text-align:center;
+    }
+    button {
+      text-align: center;
+      height: 60px;
+      width: 47%;
+      border: 5px solid white;
+      border-radius: 50%;
+      color: white;
+    }
+    .myRed {
+      background-color: red;
+    }
+    .myBlue {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body onload="startGame()">
+  <script>
+    var myGamePiece;
+    var newGamePiece;
+    var i;
+    var xVar;
+    var yVar;
+    var food;
+    var ex;
+    function startGame() {
+        myGamePiece = new component(30, 30, "red", 15, 15);
+        newGamePiece = new component(30, 30, "blue", 655, 655);
+        food = [];
+        for (i = 0; i < 50; i++) {
+          xVar = Math.floor(Math.random() * 651) + 15;
+          yVar = Math.floor(Math.random() * 651) + 15;
+          food[i] = new component(10, 10, "green", xVar, yVar);
+        }
+        myGameArea.start();
+    }
+    var redScore = 0;
+    var blueScore = 0;
+    var myGameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 700;
+            this.canvas.height = 700;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.interval = setInterval(updateGameArea, 20);
+            window.addEventListener('keydown', function (e) {
+                myGameArea.keys = (myGameArea.keys || []);
+                if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                    e.preventDefault();
+                }
+                myGameArea.keys[e.keyCode] = true;
+            })
+            window.addEventListener('keyup', function (e) {
+                myGameArea.keys[e.keyCode] = false; 
+            })
+        },
+        clear : function() {
+           this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        },
+        stop : function() {
+            clearInterval(this.interval);
+        }
+    }
+    function redUp() {
+      myGamePiece.speedY = 1;
+    }
+    function redLeft() {
+      myGamePiece.speedX = 1;
+    }
+    function redRight() {
+      myGamePiece.speedX = 3;
+    }
+    function redDown() {
+      myGamePiece.speedY = 3;
+    }
+    function redStop() {
+      myGamePiece.speedX = 2;
+      myGamePiece.speedY = 2;
+    }
+    function blueUp() {
+      newGamePiece.speedY = 1;
+    }
+    function blueLeft() {
+      newGamePiece.speedX += 1;
+    }
+    function blueRight() {
+      newGamePiece.speedX = 3;
+    }
+    function blueDown() {
+      newGamePiece.speedY = 3;
+    }
+    function blueStop() {
+      newGamePiece.speedX = 2;
+      newGamePiece.speedY = 2;
+    }
+    function component(width, height, color, x, y) {
+        this.width = width;
+        this.height = height;
+        this.speedX = 0;
+        this.speedY = 0; 
+        this.x = x;
+        this.y = y; 
+        this.update = function(){
+          ctx = myGameArea.context;
+          ctx.fillStyle = color;
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+        this.newPos = function() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.hitBottom(); 
+        } 
+        this.crashWith = function(otherobj) {
+            var myleft = this.x;
+            var myright = this.x + (this.width);
+            var mytop = this.y;
+            var mybottom = this.y + (this.height);
+            var otherleft = otherobj.x;
+            var otherright = otherobj.x + (otherobj.width);
+            var othertop = otherobj.y;
+            var otherbottom = otherobj.y + (otherobj.height);
+            var crash = true;
+            if ((mybottom < othertop) ||
+                  (mytop > otherbottom) ||
+                  (myright < otherleft) ||
+                  (myleft > otherright)) {
+              crash = false;
+            }
+            return crash;
+        }
+        this.hitBottom = function() {
+            var rockbottom = myGameArea.canvas.height - this.height;
+            if (this.y > rockbottom) {
+                this.y = rockbottom;
+            }
+            if (this.y < 0) {
+                this.y = 0;
+            }
+            if (this.x < 0) {
+                this.x = 0;
+            }
+            var rockright = myGameArea.canvas.width - this.width;
+            if (this.x > rockright) {
+                this.x = rockright;
+            }
+        }
+    }
+    function updateGameArea() {
+        if (myGamePiece.crashWith(newGamePiece)) {
+            if (myGamePiece.height > newGamePiece.height) {
+              myGamePiece.height += newGamePiece.height / 2;
+              myGamePiece.width += newGamePiece.width / 2;
+              newGamePiece = new component(30, 30, "blue", 655, 655);
+              while (myGamePiece.crashWith(newGamePiece)) {
+                xVar = Math.floor(Math.random() * 651) + 15;
+                yVar = Math.floor(Math.random() * 651) + 15;
+                newGamePiece = new component(30, 30, "blue", xVar, yVar);
+              }
+              redScore++;
+              document.getElementById("madrid").innerHTML = redScore;
+            }
+            else if (myGamePiece.height < newGamePiece.height) {
+              newGamePiece.height += myGamePiece.height / 2;
+              newGamePiece.width += myGamePiece.width / 2;
+              myGamePiece = new component(30, 30, "red", 15, 15);
+              while (myGamePiece.crashWith(newGamePiece)) {
+                xVar = Math.floor(Math.random() * 651) + 15;
+                yVar = Math.floor(Math.random() * 651) + 15;
+                myGamePiece = new component(30, 30, "red", xVar, yVar);
+              }
+              blueScore++;
+              document.getElementById("barcelona").innerHTML = blueScore;
+            }
+            else {}
+        }
+        if (redScore == 9999999999) {
+          document.getElementById("resultPar").innerHTML = "Red wins!";
+          myGameArea.stop();
+        }
+        else if (blueScore == 9999999999) {
+          document.getElementById("resultPar").innerHTML = "Blue wins!";
+          myGameArea.stop();
+        }
+        else {
+          for (i = 0; i < 50; i++) {
+            xVar = Math.floor(Math.random() * 651) + 15;
+            yVar = Math.floor(Math.random() * 651) + 15;
+            if (myGamePiece.crashWith(food[i])) {
+              myGamePiece.height += 1;
+              myGamePiece.width += 1;
+              food[i] = new component(10, 10, "green", xVar, yVar);
+            }
+            else if (newGamePiece.crashWith(food[i])) {
+              newGamePiece.height += 1;
+              newGamePiece.width += 1;
+              food[i] = new component(10, 10, "green", xVar, yVar);
+            }
+            else {}
+          }
+          if (myGamePiece.width > 300 && newGamePiece.width > 300) {
+            myGamePiece = new component(30, 30, "red", 15, 15);
+            newGamePiece = new component(30, 30, "blue", 655, 655);
+          }
+          else if (myGamePiece.width > 300 && newGamePiece.width <= 300) {
+            myGamePiece.width = 300;
+            myGamePiece.height = 300;
+          }
+          else if (myGamePiece.width <= 300 && newGamePiece.width > 300) {
+            newGamePiece.width = 300;
+            newGamePiece.height = 300;
+          }
+          myGameArea.clear();
+          for (i = 0; i < 50; i++) {
+            food[i].update();
+          } 
+          if (myGameArea.keys && myGameArea.keys[65]) {myGamePiece.speedX = -1;
+          myGamePiece.newPos();
+          myGamePiece.update();
+          myGamePiece.speedX = 0;
+          myGamePiece.speedY = 0; }
+          if (myGameArea.keys && myGameArea.keys[68]) {myGamePiece.speedX = 1;
+          myGamePiece.newPos();
+          myGamePiece.update();
+          myGamePiece.speedX = 0;
+          myGamePiece.speedY = 0;}
+          if (myGameArea.keys && myGameArea.keys[87]) {myGamePiece.speedY = -1;
+          myGamePiece.newPos();
+          myGamePiece.update();
+          myGamePiece.speedX = 0;
+          myGamePiece.speedY = 0;}
+          if (myGameArea.keys && myGameArea.keys[83]) {myGamePiece.speedY = 1;myGamePiece.newPos();
+          myGamePiece.update();
+          myGamePiece.speedX = 0;
+          myGamePiece.speedY = 0;}
+          else {
+            myGamePiece.newPos();
+            myGamePiece.update();
+          }
+          if (myGameArea.keys && myGameArea.keys[37]) {newGamePiece.speedX = -1;
+          newGamePiece.newPos();
+          newGamePiece.update();
+          newGamePiece.speedX = 0;
+          newGamePiece.speedY = 0;}
+          if (myGameArea.keys && myGameArea.keys[39]) {newGamePiece.speedX = 1;
+          newGamePiece.newPos();
+          newGamePiece.update();
+          newGamePiece.speedX = 0;
+          newGamePiece.speedY = 0;}
+          if (myGameArea.keys && myGameArea.keys[38]) {newGamePiece.speedY = -1;
+          newGamePiece.newPos();
+          newGamePiece.update();
+          newGamePiece.speedX = 0;
+          newGamePiece.speedY = 0;}
+          if (myGameArea.keys && myGameArea.keys[40]) {newGamePiece.speedY = 1;
+          newGamePiece.newPos();
+          newGamePiece.update();
+          newGamePiece.speedX = 0;
+          newGamePiece.speedY = 0;}
+          else{
+            newGamePiece.newPos();
+            newGamePiece.update();
+          }
+        }
+    }
+  </script>
+  <div id="left"></div>
+  <div id = "stuff">
+  <div id="score">
+    <div id="red"><p id="madrid">0</p></div><div id="blue"><p id="barcelona">0</p></div>
+  </div><br>
+  <div id="resultDiv">
+    <p id="resultPar">Get to 9999999999 points to win!</p>
+  </div>
+  <div id ="button"><div id = "redButtons"><br><button class="myRed" onmousedown="redUp()" ontouchstart="redUp()" onmouseup="redStop()" ontouchend="redStop()">UP</button><br><button class="myRed" onmousedown="redLeft()" ontouchstart="redLeft()" onmouseup="redStop()" ontouchend="redStop()">LEFT</button><button class="myRed" onmousedown="redRight()" ontouchstart="redRight()" onmouseup="redStop()" ontouchend="redStop()">RIGHT</button><br><button class="myRed" onmousedown="redDown()" ontouchstart="redDown()" onmouseup="redStop()" ontouchend="redStop()">DOWN</button></div><div id = "blueButtons"><br><button class="myBlue" onmousedown="blueUp()" ontouchstart="blueUp()" onmouseup="blueStop()" ontouchend="blueStop()">UP</button><br><button class="myBlue" onmousedown="blueLeft()" ontouchstart="blueLeft()" onmouseup="blueStop()" ontouchend="blueStop()">LEFT</button><button class="myBlue" onmousedown="blueRight()" ontouchstart="blueRight()" onmouseup="blueStop()" ontouchend="blueStop()">RIGHT</button><br><button class="myBlue" onmousedown="blueDown()" ontouchstart="blueDown()" onmouseup="blueStop()" ontouchend="blueStop()">DOWN</button></div></div></div>
+</body>
